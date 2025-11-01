@@ -1,20 +1,55 @@
+=====  2022 =====
 
-[Tensorflow]
-> pip install tensorflow==1.5
+	[Tensorflow]
+	> pip install tensorflow==1.5
 
-[Baselines]
-> git clone https://github.com/openai/baselines.git
-> cd baselines
-> pip install -e .
+	[Baselines]
+	> git clone https://github.com/openai/baselines.git
+	> cd baselines
+	> pip install -e .
 
-[GYM]
-option 1:
-> conda install -c conda-forge gym
+	[GYM]
+	option 1:
+	> conda install -c conda-forge gym
 
-option 2:
-> git clone https://github.com/openai/gym.git
-> cd gym
-> pip install -e .
+	option 2:
+	> git clone https://github.com/openai/gym.git
+	> cd gym
+	> pip install -e .
 
-[PyBullet]
-> conda install -c conda-forge pybullet
+	[PyBullet]
+	> conda install -c conda-forge pybullet
+
+===== 2025.11.01 Updated =====
+
+	[env detail]
+	using miniconda to manage the environment
+
+	Python 3.6
+	> conda create --name py36 python=3.6
+
+	Tensorflow 1.5
+	> pip install tensorflow==1.5
+
+	OpenCV 4.5.4.60
+	> pip install opencv-python==4.5.4.60
+
+	baseline local version
+	> cd baselines
+	> pip install -e .
+
+	gym conda-forge
+	> conda install -c conda-forge gym
+
+	pybullet conda-forge 
+	> conda install -c conda-forge pybullet
+
+	----- using yml file -----
+
+	restore the env file
+	> conda env create -f filename.yml
+	  (still need to install baselines locally)
+
+	back an env to file
+	> conda env export > filename.yml
+
