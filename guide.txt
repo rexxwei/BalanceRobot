@@ -53,3 +53,24 @@
 	back an env to file
 	> conda env export > filename.yml
 
+	----- Using conda pack with Python 3.6 -----
+	1. install an older compatible version of conda-pack
+
+	# Make sure you're in your base Conda
+	> conda activate base
+	
+	# Install older conda-pack that supports Python 3.6
+	> conda install -c conda-forge "conda-pack<0.7"
+	
+	# Pack your Python 3.6 environment (example: env name is py36)
+	> conda pack -n py36 -o py36_env.tar.gz
+	
+	2. Now you can transfer and unpack it anywhere (on same OS):
+	
+	> mkdir py36_clone
+	> tar -xzf py36_env.tar.gz -C py36_clone
+	> cd py36_clone
+	> source bin/activate  # or Scripts\\activate on Windows
+
+
+
